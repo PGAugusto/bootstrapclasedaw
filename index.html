@@ -392,14 +392,22 @@
 
          <!-- utilizamos un grid para meter el formulario entero-->
          <div class="container">
-          <div class="row        d-flex justify-content-center">
+          <div class="row        d-flex justify-content-center"><!-- esto hace que el formulario se centre horizontalmente sin
+                                                                     necesidad de incluir columnas vacías a derecha e izquierda -->
             <div class="col-12 col-md-8 col-sm-6">
 
+              <!-- los formularios, por defecto, tendrán method (envío de datos) post
+                   el evento onsubmit hace que, al pulsar el botón enviar, se invoque a la función
+                   validar(), que tendrá un valor devuelto booleano: true si todo está bien, y false
+                   si uno o más campos fueran erróneos (y eso haría que se detuviera el envío) -->
               <form action="" method="post" onsubmit="return validar()">
 
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre<span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="nombre" placeholder="obligatorio" >
+                    <!-- este div bajo el campo de formulario, crea un espacio vacío para
+                         poder insertar un mensaje de error, en caso de que lo hubiera,
+                         al validar -->
                   <div id="nombreMsgError" class="text-danger">
                     
                   </div>
@@ -408,6 +416,7 @@
                 <div class="mb-3">
                   <label for="apellido" class="form-label">Apellido<span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="apellido" placeholder="obligatorio">
+                    <!-- ver comentario para campo nombre -->
                   <div id="apellidoMsgError">
                     
                   </div>
@@ -429,6 +438,7 @@
                   <option value="2">Granada</option>
                   <option value="3">Almería</option>
                 </select>
+                    <!-- ver comentario para campo nombre -->
                 <div id="provinciaMsgError" class="text-danger">
                   
                 </div>
