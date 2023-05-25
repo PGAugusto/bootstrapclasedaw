@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi ejemplo Bootstrap de clase</title>
+    <!-- PASO 1.1 - ENLAZO ESTILO BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- link a font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <!-- tuneando mi estilo más allá de bootstrap -->
+    <link rel="stylesheet" href="./css/miestilo.css">
+
+</head>
+<body >
+    <!-- paso 0 - crear la estructura de index usando Emmet
+        div#wrapper>nav+section#hero+section*4+footer -->
+    
+        
+            <nav class="navbar position-sticky top-0 navbar-expand-lg bg-violet opacity-75">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="https://fastly.picsum.photos/id/485/32/32.jpg?hmac=XdlYEkSLeRBhvPHMKeTtAU5wNpPrSTlOscrmH30iAs4"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#cuatro">Sección 4</a>
+                      </li>
+                      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#uno">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <!--<li><hr class="dropdown-divider"></li>-->
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <!--
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li>-->
+                    </ul>
+                    <!--
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-light" type="submit">Search</button>
+                    </form>-->
+                  </div>
+                </div>
+              </nav>
+      <div id="wrapper" class="container bg-white px-0">    
+        <section id="hero">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://fastly.picsum.photos/id/665/1000/600.jpg?hmac=53iJrR7AKdZZxbDccqoYrbFcqByU7DlSR8k88P9_41g" class="d-block w-100" alt="explicación slide 1">
+                    <div class="carousel-caption d-none d-md-block bg-secondary opacity-75 border-redondo">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://fastly.picsum.photos/id/565/1000/600.jpg?hmac=oJQa8_RLVzpyhJggqcyNnMUelPH8nqYUaqj65ws0p5c" class="d-block w-100" alt="explicacion slide 2">
+                    <div class="carousel-caption d-none d-md-block bg-secondary opacity-75 border-redondo">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://fastly.picsum.photos/id/496/1000/600.jpg?hmac=9V30-vntRBUaq49MEjYYZmY7unvbkuSOfdTKE0GxJSo" class="d-block w-100" alt="explicacion slide 3">
+                    <div class="carousel-caption d-none d-md-block bg-secondary opacity-75 border-redondo">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://fastly.picsum.photos/id/406/1000/600.jpg?hmac=lyutu1VN0UdAYxSW1Q3nJH6zado8-ljNYljyD7Ryf-w" class="d-block w-100" alt="explicacion slide 4">
+                    <div class="carousel-caption d-none d-md-block bg-secondary opacity-75 border-redondo">
+                      <h5>fourth slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+
+        <!-- grid a 2 columnas en tablet y 4 en pc -->
+
+        <section class="p-5 bg-light">
+
+          <div class="titulo">
+             Introducción
+          </div>
+
+           <div class="container">
+            <div class="row g-5 d-flex align-items-center">
+              <div class="col-12 col-md-6">
+                <img class="w-100"  src="https://fastly.picsum.photos/id/217/400/400.jpg?hmac=k4KzC-WaUV3-dicEW5ayt-uENggt74q6RC_Jvu3IQPI" alt="">
+              </div>
+              <div class="col-12 col-md-6" style="background-color:yellow!important">
+                <h1>yo que sé</h1>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nemo delectus, itaque voluptate optio, dolorem quisquam nulla eaque, iure dicta tempore voluptatum dolor voluptatibus. Qui facere labore voluptate omnis quaerat?
+                A aut magnam delectus praesentium, quaerat maiores iure, magni tempore odio rerum dolore excepturi laborum assumenda impedit debitis. Sequi inventore officiis reiciendis tenetur culpa illo voluptatibus dicta maiores unde fugit!
+                
+              </div>
+              <div class="col-12 col-md-6">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis cumque maxime facilis, repudiandae inventore tenetur id quos velit, atque vitae sapiente, totam doloremque deserunt laborum molestias natus nulla corrupti vero?
+                Ipsa sunt repellat deserunt laboriosam error libero perferendis quisquam eligendi fuga possimus iusto adipisci quod repudiandae autem excepturi deleniti optio dolor, nobis quae, saepe debitis illum perspiciatis atque illo? Consequatur?
+              </div>
+              <div class="col-12 col-md-6">
+                <img class="w-100" src="https://fastly.picsum.photos/id/179/400/400.jpg?hmac=QFpfoTOJ1s4KXB8xDyQlHASjv-bxQ0QNYCchGZ6R8VI" alt="">
+              </div>
+
+            </div>
+           </div>
+           
+
+        </section>
+
+        <section id="uno" class="p-5">
+
+          <div class="titulo">
+            Preguntas frecuentes
+         </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-0 col-md-2">
+
+              </div>
+              <div class="col-12 col-md-8">
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Accordion Item #4
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+              <div class="col-0 col-md-2">
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+            
+              
+        </section>
+        <!-- accordion centrado usando flexbox-->
+        <section id="uno2" class="p-5">
+
+          <div class="titulo">
+            Preguntas frecuentes
+         </div>
+
+          <div class="container">
+            <div class="row d-flex justify-content-center ">
+              
+              <div class="col-12 col-md-8">
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Accordion Item #4
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+              
+            </div>
+          </div>
+
+
+
+
+            
+              
+        </section>
+
+
+
+        <section class="p-5 bg-light">
+          <!-- aquí pruebo una ventana modal -->
+          <div class="titulo">
+            Mi botón
+         </div>
+            <!-- 1- el botón es el disparador, y se debe a los atributos
+                 data-bs-toggle y data-bs-target -->
+            <button type="button" class="btn btn-outline-primary btn-lg m-auto d-block" 
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Mi botón</button>
+
+            <!-- 2- inserto el código de la ventana modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">El título que sea</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque exercitationem nemo accusamus quidem, quod impedit vero id pariatur? Doloremque ipsum aliquam corporis esse amet deserunt! Voluptatem ut doloremque est laboriosam.</p>
+                    <p>Iure exercitationem minima error officiis consectetur consequatur sequi dicta, blanditiis aperiam magni fuga quis aliquid voluptate voluptas placeat accusamus, sed dolor dolores fugiat nam alias provident facere tempora. Iure, repellendus!</p>
+                    <p>Officia praesentium inventore cumque a dicta accusamus magni placeat voluptatibus ipsam vel molestias rem porro beatae aut iste culpa numquam, dignissimos asperiores, ea tempore sit temporibus nobis cum. Velit, facilis!</p>
+                    
+                  </div>
+                  <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-primary">Salir</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+        </section>
+
+
+        <section id="cuatro" class="py-5">
+          <!-- estructura de grid -->
+           <div class="container">
+            <div class="row g-3 ">
+              <!-- ponemos la imagen redonda y sin borde y en vez
+                   de botón, un vínculo con estilo propio -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-3 border border-0 " >
+                  <img class="rounded-circle" src="https://fastly.picsum.photos/id/171/300/300.jpg?hmac=hEdWdS7PgEYliDZkkie5BXb5e69BDAf2jnyt4feIiWg" class="card-img-top" alt="foto aleatoria de prueba">
+                  <div class="card-body">
+                    <h2 class="card-title">Sección 4</h2>
+                    <p class="card-text">Aquí iría mi texto y si quieres saber más, pulsas el botón</p>
+                    <p class="card-text">Y esto es otro párrafo</p>
+                    <a href="#" class="link-button" >Leer más</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- sustituimos imagen por icono de font-awesome -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-3 shadow-sm" >
+                  <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                  <div class="card-body">
+                    <h2 class="card-title">Sección 4</h2>
+                    <p class="card-text">Aquí iría mi texto y si quieres saber más, pulsas el botón</p>
+                    <p class="card-text">Y esto es otro párrafo</p>
+                    <a href="#" class="btn btn-primary">Leer más</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-3" >
+                  <img src="https://fastly.picsum.photos/id/171/300/300.jpg?hmac=hEdWdS7PgEYliDZkkie5BXb5e69BDAf2jnyt4feIiWg" class="card-img-top" alt="foto aleatoria de prueba">
+                  <div class="card-body">
+                    <h2 class="card-title">Sección 4</h2>
+                    <p class="card-text">Aquí iría mi texto y si quieres saber más, pulsas el botón</p>
+                    <p class="card-text">Y esto es otro párrafo</p>
+                    <a href="#" class="btn btn-primary">Leer más</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card my-3" >
+                  <img src="https://fastly.picsum.photos/id/171/300/300.jpg?hmac=hEdWdS7PgEYliDZkkie5BXb5e69BDAf2jnyt4feIiWg" class="card-img-top" alt="foto aleatoria de prueba">
+                  <div class="card-body">
+                    <h2 class="card-title">Sección 4</h2>
+                    <p class="card-text">Aquí iría mi texto y si quieres saber más, pulsas el botón</p>
+                    <p class="card-text">Y esto es otro párrafo</p>
+                    <a href="#" class="btn btn-primary">Leer más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+
+
+
+
+            
+        </section>
+        <!-- formularios en una section-->
+        <section id="contacto" class="bg-light py-5">
+          <div class="titulo">
+            Contacto
+         </div>
+
+
+         <!-- utilizamos un grid para meter el formulario entero-->
+         <div class="container">
+          <div class="row        d-flex justify-content-center">
+            <div class="col-12 col-md-8 col-sm-6">
+
+              <form action="" method="post" onsubmit="return validar()">
+
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="nombre" placeholder="obligatorio" >
+                  <div id="nombreMsgError" class="text-danger">
+                    
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="apellido" class="form-label">Apellido<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="apellido" placeholder="obligatorio">
+                  <div id="apellidoMsgError">
+                    
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
+                  <div class="valid-feedback">
+                    Correcto!
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="provincia" class="form-label">Provincia</label>
+                <select class="form-select" aria-label="Default select example" id="provincia">
+                  <option selected value="0">Elige provincia</option>
+                  <option value="1">Málaga</option>
+                  <option value="2">Granada</option>
+                  <option value="3">Almería</option>
+                </select>
+                <div id="provinciaMsgError" class="text-danger">
+                  
+                </div>
+              </div>
+      
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Acepto la política de privacidad
+                  </label>
+                </div>
+      
+                <button type="submit" class="btn btn-primary mb-3" >Enviar</button>
+
+               </form>
+
+
+
+              
+            </div>
+          </div>
+         </div>
+         
+
+        </section>
+
+
+        <footer class="py-5 bg-violet">
+            <div class="container">
+              <div class="row 20vh gx-5 gy-3">
+                <div class="col-12 col-lg-6">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.2561821412946!2d-4.557382323698994!3d36.74042147106616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d2ffe3a137%3A0xe095a3ea561debe2!2sC.%20Frederick%20Terman%2C%2029590%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1684150089678!5m2!1ses!2ses"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+
+                </div>
+                <div class="col-6 col-lg-3">
+                  <h2 class="text-center mb-5">Vínculos</h2>
+                  <p><a href="#">Home</a></p>
+                  <p><a href="#hero">Imágenes</a></p>
+                  <p><a href="#uno">Uno</a></p>
+                  <p><a href="#dos">Dos</a></p>
+                  <p><a href=""></a></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <h2 class="text-center mb-5">Redes</h2>
+                  <p><a href="#"><i class="fa fa-facebook-official"></i></a></p>
+                  <p><a href="#"><i class="fa fa-twitter-square"></i></a></p>
+                  <p><a href="#">Uno</a></p>
+                  <p><a href="#">Dos</a></p>
+                </div>
+              </div>
+            </div>
+
+        </footer>
+    </div>
+    <!-- PASO 1.2 - ENLAZAR LAS LIBRERIAS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <!-- funciones javascript para validar -->
+    <script src="./js/mivalidacion.js"></script>
+
+</body>
+</html>

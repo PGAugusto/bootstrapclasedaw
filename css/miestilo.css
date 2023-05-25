@@ -1,0 +1,75 @@
+/**************************************************/
+/* tuneando estilo de bootstrap                   */
+/**************************************************/
+
+
+/* puedo crear mis propias clases siguiendo la nomenclatura */
+/* de bootstrap                                             */
+
+body {font-family: font-family: 'Roboto Mono', monospace; !important}
+
+.bg-violet {background-color: blueviolet;}
+.text-violet {color:blueviolet;}
+.border-violet {border-color:blueviolet}
+
+/* puedo sobreescribir el comportamiento de alguna clase */
+/* .bg-warning {background-color: blueviolet !important } */
+/* no es del todo recomendable porque crea confusión      */
+
+/* mis propios rangos entre 0 y 100 (0-25-50-75-100) */
+.bg-opacity-40 {opacity: 0.4}
+
+.border-redondo {border-radius: 25px;}
+
+/* aumentar los rangos de tamaños (0-5/6) */
+.px-6 {padding: 0 10%;}
+.px-7 {padding:0 15%;}
+/**** personalización de la barra de navegación de bootstrap ****/
+
+nav a {color:white !important;}
+
+nav ul ul {background-color: blueviolet !important;}
+
+nav ul ul a:hover {background-color: darkgray !important;}
+
+/*** personalización de accordion ****/
+
+.accordion-button {border-color:blueviolet !important;}
+
+
+nav {z-index: 99;}
+
+/****   estilo particular relativo a las cards ****/
+
+.link-button {text-decoration:none;
+              font-weight: bold;
+              display:block;
+              text-align: center;}
+
+.link-button:hover {color:blueviolet}
+
+.card .fa {font-size: 10rem;
+           text-align:center;
+           color:red;}
+
+
+
+/**** título formateado para cada section  ******/
+
+.titulo {font-size:300%;
+         text-align:center;
+         color:blueviolet;
+         border-bottom:blueviolet solid 1px;
+         margin-bottom:40px; }
+
+/****** personalización footer *************/
+
+footer p a {display:block;
+            text-align:center;
+            color:white;
+            font-weight:bold;
+            text-decoration:none;}
+
+footer .fa {font-size:300%;}
+
+/**** que hacer cuando no se rellena un campo obligatorio ***/
